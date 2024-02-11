@@ -6,6 +6,7 @@ import { ThrottlerModule } from '@nestjs/throttler';
 import { ProductsModule } from './products/products.module';
 import { CategoriesModule } from './categories/categories.module';
 import { HelpersModule } from './helpers/helpers.module';
+import { PrismaService } from './prisma.service';
 
 @Module({
   imports: [
@@ -21,6 +22,6 @@ import { HelpersModule } from './helpers/helpers.module';
     HelpersModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, PrismaService],
 })
 export class AppModule {}

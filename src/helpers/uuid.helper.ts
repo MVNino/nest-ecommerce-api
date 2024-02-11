@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class UuidHelper {
-  generateUuid(): string {
+  generateUuid = (): string => {
     return (
       this.s4() +
       this.s4() +
@@ -17,7 +17,7 @@ export class UuidHelper {
       this.s4() +
       this.s4()
     );
-  }
+  };
 
   // Generate four random hexadecimal digits
   s4() {

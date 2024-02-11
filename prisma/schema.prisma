@@ -7,7 +7,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model users {
+model User {
   id         Int       @id @default(autoincrement()) @db.UnsignedInt
   uuid       String    @unique(map: "uuid_UNIQUE") @db.VarChar(36)
   email      String    @unique(map: "email_UNIQUE") @db.VarChar(45)
@@ -18,7 +18,7 @@ model users {
   updated_at DateTime? @db.DateTime(0)
 }
 
-model categories {
+model Category {
   id         Int       @id @default(autoincrement()) @db.UnsignedInt
   uuid       String    @unique(map: "uuid_UNIQUE") @db.VarChar(36)
   name       String    @db.VarChar(45)
@@ -26,7 +26,7 @@ model categories {
   updated_at DateTime? @db.DateTime(0)
 }
 
-model products {
+model Product {
   id            Int       @id @default(autoincrement()) @db.UnsignedInt
   uuid          String    @unique(map: "uuid_UNIQUE") @db.VarChar(36)
   name          String    @db.VarChar(45)
