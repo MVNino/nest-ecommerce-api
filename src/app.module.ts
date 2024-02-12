@@ -7,6 +7,7 @@ import { ProductsModule } from './products/products.module';
 import { CategoriesModule } from './categories/categories.module';
 import { HelpersModule } from './helpers/helpers.module';
 import { PrismaService } from './prisma.service';
+import { WalletModule } from './wallet/wallet.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { PrismaService } from './prisma.service';
     ProductsModule,
     CategoriesModule,
     HelpersModule,
+    WalletModule,
   ],
   controllers: [AppController],
   providers: [AppService, PrismaService],
