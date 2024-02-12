@@ -8,6 +8,7 @@ import { CategoriesModule } from './categories/categories.module';
 import { HelpersModule } from './helpers/helpers.module';
 import { PrismaService } from './prisma.service';
 import { WalletModule } from './wallet/wallet.module';
+import { UuidHelper } from './helpers/uuid.helper';
 
 @Module({
   imports: [
@@ -24,6 +25,6 @@ import { WalletModule } from './wallet/wallet.module';
     WalletModule,
   ],
   controllers: [AppController],
-  providers: [AppService, PrismaService],
+  providers: [AppService, PrismaService, UuidHelper],
 })
 export class AppModule {}
